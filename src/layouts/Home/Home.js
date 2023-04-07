@@ -233,7 +233,7 @@ export const Home = () => {
       />
       <ProjectSummary
         id="project-6"
-        // alternate
+        alternate
         sectionRef={projectSix}
         visible={visibleSections.includes(projectSix.current)}
         index={6}
