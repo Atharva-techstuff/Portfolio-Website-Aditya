@@ -38,7 +38,7 @@ export const Home = () => {
   const [visibleSections, setVisibleSections] = useState([]);
   const [scrollIndicatorHidden, setScrollIndicatorHidden] = useState(false);
   const intro = useRef();
-  
+
   const projectZero = useRef();
   const projectOne = useRef();
   const projectTwo = useRef();
@@ -175,7 +175,6 @@ export const Home = () => {
           ],
         }}
       />
-
       <ProjectSummary
         id="project-3"
         sectionRef={projectThree}
@@ -196,7 +195,7 @@ export const Home = () => {
       />
       <ProjectSummary
         id="project-4"
-         alternate
+        alternate
         sectionRef={projectFour}
         visible={visibleSections.includes(projectFour.current)}
         index={4}
@@ -245,7 +244,7 @@ export const Home = () => {
           alt: 'Smart Sparrow lesson builder',
           textures: [
             {
-              srcSet: [performanceOptimization, performanceOptimizationLarge],
+              srcSet: [debug, debugLarge],
               placeholder: sprTexturePlaceholder,
             },
           ],
