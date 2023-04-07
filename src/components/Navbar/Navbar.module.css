@@ -43,7 +43,7 @@
   /* flex: 1 1 auto; */
   max-width: var(--space2XL);
 
-  @media (--mediaMobile), (--mediaMobileLS) {
+  @media (--mediaMobile), (--mediaMobileLS),(max-height:796px) {
     display: none;
   }
 }
@@ -130,7 +130,7 @@
   position: relative;
   z-index: var(--zIndex2);
 
-  @media (--mediaMobile), (--mediaMobileLS) {
+  @media (--mediaMobile), (--mediaMobileLS),(max-height:796px) {
     flex-direction: row;
     position: absolute;
     bottom: var(--spaceXL);
@@ -189,7 +189,7 @@
   justify-content: center;
   backdrop-filter: blur(16px);
 
-  @media (--mediaMobile), (--mediaMobileLS) {
+  @media (--mediaMobile), (--mediaMobileLS),(max-height:796px) {
     display: flex;
   }
 

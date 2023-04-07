@@ -8,7 +8,7 @@ button.toggle {
   z-index: var(--zIndex4);
   display: none;
 
-  @media (--mediaMobile), (--mediaMobileLS) {
+  @media (--mediaMobile), (--mediaMobileLS),(max-height:796px) {
     display: flex;
   }
 }

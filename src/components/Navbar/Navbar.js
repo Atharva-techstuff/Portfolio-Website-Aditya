@@ -21,7 +21,7 @@ export const Navbar = () => {
   const { route, asPath } = useRouter();
   const windowSize = useWindowSize();
   const headerRef = useRef();
-  const isMobile = windowSize.width <= media.mobile || windowSize.height <= 696;
+  const isMobile = windowSize.width <= media.mobile || windowSize.height <= 796;
   const scrollToHash = useScrollToHash();
 
   useEffect(() => {
