@@ -84,7 +84,7 @@ export const Home = () => {
       ([entry]) => {
         setScrollIndicatorHidden(!entry.isIntersecting);
       },
-      { rootMargin: '0px 0px 0px 0px'}
+      // { rootMargin: '0px 0px 0px 0px'}
     );
 
     sections.forEach(section => {

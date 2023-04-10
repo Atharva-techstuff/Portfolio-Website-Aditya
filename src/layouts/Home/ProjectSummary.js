@@ -105,7 +105,6 @@ export const ProjectSummary = ({
           >
             {/* {console.log("PVISIBLE", model, "VIS ", visible, "Title", title)} */}
             <button onClick={() => clickHandle(visible)}>REnder Preview</button>
-            {/* visible:{visible} */}
             <Model
               alt={model.alt}
               cameraPosition={{ x: 0, y: 0, z: 8 }}
