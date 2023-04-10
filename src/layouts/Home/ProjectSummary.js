@@ -154,8 +154,8 @@ export const ProjectSummary = ({
 
   const clickHandle = () => {
     console.log("CLICKEDD");
-    alert("ID " + id + "\nSEC-REF " + { sectionRef } + "\nIndex " + index + "\nTITLE " + title + "\nModel " + { model } + "\nALT " + alternate + "\nREST " + { rest }+"\nSection "+sectionVisible);
-  }
+    alert("ID " + id + "\nSEC-REF " + { sectionRef } + "\nIndex " + index + "\nTITLE " + title + "\nModel " + { model } + "\nALT " + alternate + "\nREST " + { rest } + "\nSection " + sectionVisible);
+  };
 
   // useEffect(() => {
   //   console.log("USE-EFF");
