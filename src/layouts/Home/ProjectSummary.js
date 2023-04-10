@@ -44,20 +44,20 @@ export const ProjectSummary = ({
   const laptopSizes = `(max-width: ${media.tablet}px) 80vw, 40vw`;
 
   // const renderKatakana = (device, visible) => (
-  //   <div styles={{ backgroundColor: 'red' }}>RENDER KANTAFSDF SFD</div>
-  //   // <svg
-  //   //   aria-hidden="true"
-  //   //   width="750"
-  //   //   height="137"
-  //   //   viewBox="0 0 750 137"
-  //   //   data-visible={visible}
-  //   //   data-light={theme.themeId === 'light'}
-  //   //   style={cssProps({ opacity: svgOpacity })}
-  //   //   className={styles.svg}
-  //   //   data-device={device}
-  //   // >
-  //   // RK  <use href={`${projectKatakana}#katakana-project`} />
-  //   // </svg>
+  //   <div style={{ backgroundColor: 'red' }}>RENDER KANTAFSDF SFD</div>
+  //   <svg
+  //     aria-hidden="true"
+  //     width="750"
+  //     height="137"
+  //     viewBox="0 0 750 137"
+  //     data-visible={visible}
+  //     data-light={theme.themeId === 'light'}
+  //     style={cssProps({ opacity: svgOpacity })}
+  //     className={styles.svg}
+  //     data-device={device}
+  //   >
+  //   RK  <use href={`${projectKatakana}#katakana-project`} />
+  //   </svg>
   // );
 
   const renderDetails = visible => (
