@@ -169,7 +169,7 @@ export const Home = () => {
           alt: 'Annotating a biomedical image in the Slice app',
           textures: [
             {
-              srcSet: [customAppDevelopment, customAppDevelopmentLarge],
+              srcSet: [frontendArchitecture, frontendArchitectureLarge],
               placeholder: sliceTexturePlaceholder,
             },
           ],
@@ -206,7 +206,7 @@ export const Home = () => {
           alt: 'Annotating a biomedical image in the Slice app',
           textures: [
             {
-              srcSet: [pwaDevelopment, pwaDevelopmentLarge],
+              srcSet: [frontendArchitecture, frontendArchitectureLarge],
               placeholder: sliceTexturePlaceholder,
             },
           ],
@@ -224,7 +224,7 @@ export const Home = () => {
           alt: 'Annotating a biomedical image in the Slice app',
           textures: [
             {
-              srcSet: [debug, debugLarge],
+              srcSet: [frontendArchitecture, frontendArchitectureLarge],
               placeholder: sliceTexturePlaceholder,
             },
           ],
@@ -243,7 +243,7 @@ export const Home = () => {
           alt: 'Smart Sparrow lesson builder',
           textures: [
             {
-              srcSet: [performanceOptimization, performanceOptimizationLarge],
+              srcSet: [frontendArchitecture, frontendArchitectureLarge],
               placeholder: sprTexturePlaceholder,
             },
           ],
@@ -263,7 +263,7 @@ export const Home = () => {
           alt: 'Smart Sparrow lesson builder',
           textures: [
             {
-              srcSet: [mobileResponsive, mobileResponsiveLarge],
+              srcSet: [frontendArchitecture, frontendArchitectureLarge],
               placeholder: sprTexturePlaceholder,
             },
           ],
@@ -283,7 +283,7 @@ export const Home = () => {
           alt: 'Annotating a biomedical image in the Slice app',
           textures: [
             {
-              srcSet: [crossBorderCompatiblity, crossBorderCompatiblityLarge],
+              srcSet: [frontendArchitecture, frontendArchitectureLarge],
               placeholder: sliceTexturePlaceholder,
             },
           ],
