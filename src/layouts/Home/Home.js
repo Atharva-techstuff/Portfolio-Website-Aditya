@@ -212,31 +212,12 @@ export const Home = () => {
           ],
         }}
       />
-
       <ProjectSummary
         id="project-5"
+        alternate
         sectionRef={projectFive}
         visible={visibleSections.includes(projectFive.current)}
         index={5}
-        title="Debugging and Testing"
-        description="I believe that testing and debugging are critical to ensuring the quality and reliability of software applications. I perform extensive testing and debugging to identify and fix any errors or issues with the web pages or application. I use various tools and techniques to debug and test my code, including unit testing, integration testing, and acceptance testing."
-        model={{
-          type: 'laptop',
-          alt: 'Annotating a biomedical image in the Slice app',
-          textures: [
-            {
-              srcSet: [debug, debugLarge],
-              placeholder: sliceTexturePlaceholder,
-            },
-          ],
-        }}
-      />
-      <ProjectSummary
-        id="project-6"
-        alternate
-        sectionRef={projectSix}
-        visible={visibleSections.includes(projectSix.current)}
-        index={6}
         title="Performance Optimization"
         description="Performance optimization is a critical aspect of software development that involves improving the speed, efficiency, and scalability of an application or website.I help to optimize web page performance to load quickly and efficiently while minimizing resource usage.I use various techniques and tools to optimize the performance of my code, including minification, caching, compression, and lazy loading. "
         model={{
@@ -250,6 +231,25 @@ export const Home = () => {
           ],
         }}
       />
+      <ProjectSummary
+        id="project-6"
+        sectionRef={projectSix}
+        visible={visibleSections.includes(projectSix.current)}
+        index={6}
+        title="Debugging and Testing"
+        description="I believe that testing and debugging are critical to ensuring the quality and reliability of software applications. I perform extensive testing and debugging to identify and fix any errors or issues with the web pages or application. I use various tools and techniques to debug and test my code, including unit testing, integration testing, and acceptance testing."
+        model={{
+          type: 'laptop',
+          alt: 'Annotating a biomedical image in the Slice app',
+          textures: [
+            {
+              srcSet: [debug, debugLarge],
+              placeholder: sliceTexturePlaceholder,
+            },
+          ],
+        }}
+      />
+
       <ProjectSummary
         id="project-7"
         sectionRef={projectSeven}
