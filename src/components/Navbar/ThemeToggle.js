@@ -11,7 +11,7 @@ export const ThemeToggle = ({ isMobile, ...rest }) => {
   const handleClick = () => {
     dispatch({ type: 'toggleTheme' });
   };
-  { console.log("REST", rest) }
+  { console.log("REST", rest) };
 
 
   return (
