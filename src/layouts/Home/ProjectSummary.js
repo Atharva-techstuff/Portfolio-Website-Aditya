@@ -12,8 +12,8 @@ import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
 import { cssProps, media, classes } from 'utils/style';
 import styles from './ProjectSummary.module.css';
-
-const Model = dynamic(() => import('components/Model').then(mod => mod.Model));
+import Model from 'components/Model'
+// const Model = dynamic(() => import('components/Model').then(mod => mod.Model));
 
 export const ProjectSummary = ({
   id,
