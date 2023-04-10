@@ -28,7 +28,7 @@ export const ProjectSummary = ({
   alternate,
   ...rest
 }) => {
-  const { textures } = model
+  const { textures } = model;
   // console.log("ID", id, "\nSEC-REF", sectionRef, "\nIndex", index, "\nTITLE", title, "\nModel",
   //   model, "\nALT", alternate, "\nREST", rest, "VISIBLE\n", sectionVisible);
   console.log("SEC", textures[0].srcSet[0].src);
