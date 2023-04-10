@@ -29,9 +29,10 @@ export const ProjectSummary = ({
   ...rest
 }) => {
   const { textures } = model;
+  // console.log("MODAL", sectionRef.current);
   // console.log("ID", id, "\nSEC-REF", sectionRef, "\nIndex", index, "\nTITLE", title, "\nModel",
   //   model, "\nALT", alternate, "\nREST", rest, "VISIBLE\n", sectionVisible);
-  console.log("SEC", textures[0].srcSet[0].src);
+  // console.log("SEC", textures[0].srcSet[0].src);
   const [focused, setFocused] = useState(false);
   const theme = useTheme();
   const { width } = useWindowSize();
@@ -102,6 +103,9 @@ export const ProjectSummary = ({
             className={alternate ? classes(styles.model, styles.modelLeft) : styles.model}
             data-device="laptop"
           >
+            {/* {console.log("PVISIBLE", model, "VIS ", visible, "Title", title)} */}
+            <button onClick={() => clickHandle(visible)}>REnder Preview</button>
+            {/* visible:{visible} */}
             <Model
               alt={model.alt}
               cameraPosition={{ x: 0, y: 0, z: 8 }}
@@ -154,9 +158,9 @@ export const ProjectSummary = ({
     </div>
   );
 
-  const clickHandle = () => {
-    console.log("CLICKEDD");
-    alert("ID " + id + "\nSEC-REF " + [{ ...sectionRef }] + "\nIndex " + index + "\nTITLE " + title + "\nModel " + textures[0].srcSet[0].src + "\nALT " + alternate + "\nREST " + rest + "\nSection " + sectionVisible);
+  const clickHandle = (visible) => {
+    console.log("CLICKEDD", visible);
+    alert("ID " + id + "\nSEC-REF " + [{ ...sectionRef }] + "\nIndex " + index + "\nTITLE " + title + "\nModel " + textures[0].srcSet[0].src + "\nALT " + alternate + "\nREST " + rest + "\nSection " + sectionVisible + "\nVISIBLE " + visible);
   };
 
   // useEffect(() => {
@@ -184,7 +188,7 @@ export const ProjectSummary = ({
         <Transition in={sectionVisible || focused}>
           {visible => (
             <>
-              <button onClick={clickHandle}>NEW DIVV </button>
+              {/* <button onClick={clickHandle}>NEW DIVV </button> */}
               {/* {console.log("VISIBLE", visible)} */}
               {!alternate && !isMobile && (
                 <>
