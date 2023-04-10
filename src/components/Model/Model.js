@@ -329,9 +329,9 @@ export const Model = ({
     <div>
       First div block
       <div
-        // className={classes(styles.model, className)}
+        className={classes(styles.model, className)}
         data-loaded={loaded}
-        // style={cssProps({ delay: numToMs(showDelay) }, style)}
+        style={cssProps({ delay: numToMs(showDelay) }, style)}
         ref={container}
         role="img"
         aria-label={alt}
@@ -342,7 +342,7 @@ export const Model = ({
         {models.map((model, index) => (
           <>
             inside models map
-            <Device
+            {/* <Device
               key={JSON.stringify(model.position)}
               renderer={renderer}
               modelGroup={modelGroup}
@@ -352,7 +352,7 @@ export const Model = ({
               index={index}
               setLoaded={setLoaded}
               model={model}
-            />
+            /> */}
           </>
         ))}
       </div>
