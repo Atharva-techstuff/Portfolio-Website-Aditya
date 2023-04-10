@@ -184,7 +184,7 @@ export const ProjectSummary = ({
         <Transition in={sectionVisible || focused}>
           {visible => (
             <>
-              <button onClick={clickHandle}>NEW DIVV </button>
+              {/* <button onClick={clickHandle}>NEW DIVV </button> */}
               {/* {console.log("VISIBLE", visible)} */}
               {!alternate && !isMobile && (
                 <>
