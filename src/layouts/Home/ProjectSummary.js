@@ -100,7 +100,7 @@ export const ProjectSummary = ({
         <>
           {renderKatakana('laptop', visible)}
           <div
-            className={alternate ? classes(styles.model, styles.modelLeft) : styles.model}
+            className={alternate ? classes(styles.model) : styles.model}
             data-device="laptop"
           >
             {/* {console.log("PVISIBLE", model, "VIS ", visible, "Title", title)} */}
