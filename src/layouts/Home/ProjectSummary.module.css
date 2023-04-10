@@ -83,7 +83,7 @@
   justify-content: center;
   height: 100%;
   width: 100%;
-  background-color: red;
+  /* background-color: red; */
 }
 
 .modelLeft {
@@ -100,7 +100,7 @@
 .model {
   --width: 180%;
   --aspectRatio: 12 / 10;
-background-color: yellow;
+/* background-color: yellow; */
   min-width: var(--width);
   aspect-ratio: var(--aspectRatio);
   display: grid;
