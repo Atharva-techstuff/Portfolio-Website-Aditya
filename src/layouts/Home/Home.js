@@ -114,7 +114,7 @@ export const Home = () => {
       />
       <ProjectSummary
         id="project-0"
-        // alternate
+        alternate
         sectionRef={projectZero}
         visible={visibleSections.includes(projectZero.current)}
         index={0}

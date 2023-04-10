@@ -104,7 +104,7 @@ export const ProjectSummary = ({
             data-device="laptop"
           >
             {/* {console.log("PVISIBLE", model, "VIS ", visible, "Title", title)} */}
-            <button onClick={() => clickHandle(visible)}>REnder Preview</button>
+            {/* <button onClick={() => clickHandle(visible)}>REnder Preview</button> */}
             <Model
               alt={model.alt}
               cameraPosition={{ x: 0, y: 0, z: 8 }}
