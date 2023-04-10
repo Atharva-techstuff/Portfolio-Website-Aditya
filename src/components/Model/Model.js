@@ -194,9 +194,9 @@ export const Model = ({
       shader.fragmentShader = `
         uniform float darkness;
         ${shader.fragmentShader.replace(
-          'gl_FragColor = vec4( vec3( 1.0 - fragCoordZ ), opacity );',
-          'gl_FragColor = vec4( vec3( 0.0 ), ( 1.0 - fragCoordZ ) * darkness );'
-        )}
+        'gl_FragColor = vec4( vec3( 1.0 - fragCoordZ ), opacity );',
+        'gl_FragColor = vec4( vec3( 0.0 ), ( 1.0 - fragCoordZ ) * darkness );'
+      )}
       `;
     };
     depthMaterial.current.depthTest = false;
@@ -335,6 +335,7 @@ export const Model = ({
       aria-label={alt}
       {...rest}
     >
+      hello text
       <canvas className={styles.canvas} ref={canvas} />
       {models.map((model, index) => (
         <Device
