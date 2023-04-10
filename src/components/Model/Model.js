@@ -326,33 +326,36 @@ export const Model = ({
   }, [renderFrame]);
 
   return (
-    <div
-      className={classes(styles.model, className)}
-      data-loaded={true}
-      style={cssProps({ delay: numToMs(showDelay) }, style)}
-      ref={container}
-      role="img"
-      aria-label={alt}
-      {...rest}
-    >
-      hello text
-      <canvas className={styles.canvas} ref={canvas} />
-      {models.map((model, index) => (
-        <>
-          inside models map
-          <Device
-            key={JSON.stringify(model.position)}
-            renderer={renderer}
-            modelGroup={modelGroup}
-            show={show}
-            showDelay={showDelay}
-            renderFrame={renderFrame}
-            index={index}
-            setLoaded={setLoaded}
-            model={model}
-          />
-        </>
-      ))}
+    <div>
+      First div block
+      <div
+        // className={classes(styles.model, className)}
+        data-loaded={loaded}
+        // style={cssProps({ delay: numToMs(showDelay) }, style)}
+        ref={container}
+        role="img"
+        aria-label={alt}
+        {...rest}
+      >
+        hello text
+        <canvas className={styles.canvas} ref={canvas} />
+        {models.map((model, index) => (
+          <>
+            inside models map
+            <Device
+              key={JSON.stringify(model.position)}
+              renderer={renderer}
+              modelGroup={modelGroup}
+              show={show}
+              showDelay={showDelay}
+              renderFrame={renderFrame}
+              index={index}
+              setLoaded={setLoaded}
+              model={model}
+            />
+          </>
+        ))}
+      </div>
     </div>
   );
 };
