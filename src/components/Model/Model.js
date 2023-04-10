@@ -328,7 +328,7 @@ export const Model = ({
   return (
     <div
       className={classes(styles.model, className)}
-      data-loaded={loaded}
+      data-loaded={true}
       style={cssProps({ delay: numToMs(showDelay) }, style)}
       ref={container}
       role="img"
