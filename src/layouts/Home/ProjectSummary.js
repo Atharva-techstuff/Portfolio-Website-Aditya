@@ -43,21 +43,22 @@ export const ProjectSummary = ({
   const phoneSizes = `(max-width: ${media.tablet}px) 30vw, 20vw`;
   const laptopSizes = `(max-width: ${media.tablet}px) 80vw, 40vw`;
 
-  const renderKatakana = (device, visible) => (
-    <svg
-      aria-hidden="true"
-      width="750"
-      height="137"
-      viewBox="0 0 750 137"
-      data-visible={visible}
-      data-light={theme.themeId === 'light'}
-      style={cssProps({ opacity: svgOpacity })}
-      className={styles.svg}
-      data-device={device}
-    >
-      RK  <use href={`${projectKatakana}#katakana-project`} />
-    </svg>
-  );
+  // const renderKatakana = (device, visible) => (
+  //   <div styles={{ backgroundColor: 'red' }}>RENDER KANTAFSDF SFD</div>
+  //   // <svg
+  //   //   aria-hidden="true"
+  //   //   width="750"
+  //   //   height="137"
+  //   //   viewBox="0 0 750 137"
+  //   //   data-visible={visible}
+  //   //   data-light={theme.themeId === 'light'}
+  //   //   style={cssProps({ opacity: svgOpacity })}
+  //   //   className={styles.svg}
+  //   //   data-device={device}
+  //   // >
+  //   // RK  <use href={`${projectKatakana}#katakana-project`} />
+  //   // </svg>
+  // );
 
   const renderDetails = visible => (
     <div className={styles.details}>
@@ -98,7 +99,7 @@ export const ProjectSummary = ({
     <div className={styles.preview}>
       {model.type === 'laptop' && (
         <>
-          {renderKatakana('laptop', visible)}
+          {/* {renderKatakana('laptop', visible)} */}
           <div
             className={styles.model}
             data-device="laptop"
@@ -125,7 +126,7 @@ export const ProjectSummary = ({
       )}
       {model.type === 'phone' && (
         <>
-          {renderKatakana('phone', visible)}
+          {/* {renderKatakana('phone', visible)} */}
           <div className={styles.model} data-device="phone">
             <Model
               alt={model.alt}
