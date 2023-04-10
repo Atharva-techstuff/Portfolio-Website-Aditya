@@ -28,8 +28,10 @@ export const ProjectSummary = ({
   alternate,
   ...rest
 }) => {
-  console.log("ID", id, "\nSEC-REF", sectionRef, "\nIndex", index, "\nTITLE", title, "\nModel", model, "\nALT", alternate, "\nREST", rest, "VISIBLE\n", sectionVisible);
-
+  const { textures } = model
+  // console.log("ID", id, "\nSEC-REF", sectionRef, "\nIndex", index, "\nTITLE", title, "\nModel",
+  //   model, "\nALT", alternate, "\nREST", rest, "VISIBLE\n", sectionVisible);
+  console.log("SEC", textures[0].srcSet[0].src);
   const [focused, setFocused] = useState(false);
   const theme = useTheme();
   const { width } = useWindowSize();
@@ -154,7 +156,7 @@ export const ProjectSummary = ({
 
   const clickHandle = () => {
     console.log("CLICKEDD");
-    alert("ID " + id + "\nSEC-REF " + { sectionRef } + "\nIndex " + index + "\nTITLE " + title + "\nModel " + { model } + "\nALT " + alternate + "\nREST " + { rest } + "\nSection " + sectionVisible);
+    alert("ID " + id + "\nSEC-REF " + [{ ...sectionRef }] + "\nIndex " + index + "\nTITLE " + title + "\nModel " + textures[0].srcSet[0].src + "\nALT " + alternate + "\nREST " + rest + "\nSection " + sectionVisible);
   };
 
   // useEffect(() => {
