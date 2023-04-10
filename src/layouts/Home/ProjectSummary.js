@@ -9,7 +9,7 @@ import { useTheme } from 'components/ThemeProvider';
 import { Transition } from 'components/Transition';
 import { useWindowSize } from 'hooks';
 import dynamic from 'next/dynamic';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { cssProps, media, classes } from 'utils/style';
 import styles from './ProjectSummary.module.css';
 
@@ -28,6 +28,8 @@ export const ProjectSummary = ({
   alternate,
   ...rest
 }) => {
+  console.log("ID", id, "\nSEC-REF", sectionRef, "\nIndex", index, "\nTITLE", title, "\nModel", model, "\nALT", alternate, "\nREST", rest, "VISIBLE\n", sectionVisible);
+
   const [focused, setFocused] = useState(false);
   const theme = useTheme();
   const { width } = useWindowSize();
@@ -150,6 +152,16 @@ export const ProjectSummary = ({
     </div>
   );
 
+  const clickHandle = () => {
+    console.log("CLICKEDD");
+    alert("ID " + id + "\nSEC-REF " + { sectionRef } + "\nIndex " + index + "\nTITLE " + title + "\nModel " + { model } + "\nALT " + alternate + "\nREST " + { rest }+"\nSection "+sectionVisible);
+  }
+
+  // useEffect(() => {
+  //   console.log("USE-EFF");
+  //   clickHandle()
+  // }, [])
+
   return (
     <Section
       className={styles.summary}
@@ -164,10 +176,14 @@ export const ProjectSummary = ({
       tabIndex={-1}
       {...rest}
     >
+      {/* <button onClick={clickHandle} styles={{ zIndex: 999 }}>Hello</button> */}
+      {/* {alert("hello")} */}
       <div className={styles.content}>
         <Transition in={sectionVisible || focused}>
           {visible => (
             <>
+              <button onClick={clickHandle}>NEW DIVV </button>
+              {/* {console.log("VISIBLE", visible)} */}
               {!alternate && !isMobile && (
                 <>
                   {renderDetails(visible)}
