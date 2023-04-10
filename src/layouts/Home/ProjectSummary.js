@@ -55,7 +55,7 @@ export const ProjectSummary = ({
       className={styles.svg}
       data-device={device}
     >
-      <use href={`${projectKatakana}#katakana-project`} />
+      RK  <use href={`${projectKatakana}#katakana-project`} />
     </svg>
   );
 
