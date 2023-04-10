@@ -503,7 +503,7 @@ const Device = ({
   }, []);
 
   useEffect(() => {
-    if (!loadDevice || !show) return;
+    // if (!loadDevice || !show) return;
     let animation;
 
     const onLoad = async () => {
