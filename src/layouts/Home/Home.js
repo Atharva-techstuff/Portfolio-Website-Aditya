@@ -84,7 +84,7 @@ export const Home = () => {
       ([entry]) => {
         setScrollIndicatorHidden(!entry.isIntersecting);
       },
-      { rootMargin: '-100% 0px 0px 0px' }
+      { rootMargin: '0px 0px -10% 0px' }
     );
 
     sections.forEach(section => {
@@ -114,7 +114,7 @@ export const Home = () => {
       />
       <ProjectSummary
         id="project-0"
-        // alternate
+        alternate
         sectionRef={projectZero}
         visible={visibleSections.includes(projectZero.current)}
         index={0}
@@ -158,7 +158,7 @@ export const Home = () => {
       />
       <ProjectSummary
         id="project-2"
-        // alternate
+        alternate
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
@@ -195,7 +195,7 @@ export const Home = () => {
       />
       <ProjectSummary
         id="project-4"
-        // alternate
+        alternate
         sectionRef={projectFour}
         visible={visibleSections.includes(projectFour.current)}
         index={4}
@@ -233,7 +233,7 @@ export const Home = () => {
       />
       <ProjectSummary
         id="project-6"
-        // alternate
+        alternate
         sectionRef={projectSix}
         visible={visibleSections.includes(projectSix.current)}
         index={6}
@@ -271,7 +271,7 @@ export const Home = () => {
 
       <ProjectSummary
         id="project-8"
-        // alternate
+        alternate
         sectionRef={projectEight}
         visible={visibleSections.includes(projectEight.current)}
         index={8}
