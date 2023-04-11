@@ -344,7 +344,7 @@ export const Model = ({
             inside models map {index}
             <Device
               key={JSON.stringify(model.position)}
-              // renderer={renderer}
+              renderer={renderer}
               modelGroup={modelGroup}
               show={show}
               showDelay={showDelay}
@@ -422,7 +422,7 @@ const Device = ({
 
           loadFullResTexture = async () => {
             const image = await resolveSrcFromSrcSet(texture);
-            const fullSize = await textureLoader.loadAsync(image);
+            // const fullSize = await textureLoader.loadAsync(image);
             await applyScreenTexture(fullSize, node);
 
             animate(1, 0, {
