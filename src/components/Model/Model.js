@@ -423,7 +423,7 @@ const Device = ({
           loadFullResTexture = async () => {
             const image = await resolveSrcFromSrcSet(texture);
             // const fullSize = await textureLoader.loadAsync(image);
-            await applyScreenTexture(fullSize, node);
+            // await applyScreenTexture(fullSize, node);
 
             animate(1, 0, {
               onUpdate: value => {
