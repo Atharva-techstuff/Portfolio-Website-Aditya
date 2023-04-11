@@ -504,29 +504,29 @@ const Device = ({
   }, []);
 
   useEffect(() => {
-    // if (!loadDevice || !show) return;
+    if (!loadDevice || !show) return;
     let animation;
 
     const onLoad = async () => {
       const { loadFullResTexture, playAnimation } = await loadDevice.start();
-
+      console.log("LOADED HERE");
       setLoaded(true);
 
-      if (!reduceMotion) {
-        animation = playAnimation();
-      }
+      // if (!reduceMotion) {
+      //   animation = playAnimation();
+      // }
 
-      await loadFullResTexture();
+      // await loadFullResTexture();
 
-      if (reduceMotion) {
-        renderFrame();
-      }
+      // if (reduceMotion) {
+      //   renderFrame();
+      // }
     };
 
     startTransition(() => {
       onLoad();
     });
-    // console.log("USE-EFF-2", show);
+    console.log("USE-EFF-2", !loadDevice);
     // alert("SHOW")
 
     return () => {
@@ -535,6 +535,7 @@ const Device = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loadDevice]);
 
+  // [console.log("SHOW", !show && "hi")]
   return (
     <>
       {' '} THIS IS DEVICEE</>
