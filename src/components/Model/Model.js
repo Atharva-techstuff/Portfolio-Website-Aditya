@@ -520,7 +520,7 @@ const Device = ({
       // await loadFullResTexture();
 
       // if (reduceMotion) {
-      //   renderFrame();
+        renderFrame();
       // }
     };
 
