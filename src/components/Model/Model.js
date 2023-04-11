@@ -63,7 +63,7 @@ export const Model = ({
   alt,
   ...rest
 }) => {
-  const [loaded, setLoaded] = useState(false);
+  const [loaded, setLoaded] = useState(true);
   const container = useRef();
   const canvas = useRef();
   const camera = useRef();
@@ -194,9 +194,9 @@ export const Model = ({
       shader.fragmentShader = `
         uniform float darkness;
         ${shader.fragmentShader.replace(
-        'gl_FragColor = vec4( vec3( 1.0 - fragCoordZ ), opacity );',
-        'gl_FragColor = vec4( vec3( 0.0 ), ( 1.0 - fragCoordZ ) * darkness );'
-      )}
+          'gl_FragColor = vec4( vec3( 1.0 - fragCoordZ ), opacity );',
+          'gl_FragColor = vec4( vec3( 0.0 ), ( 1.0 - fragCoordZ ) * darkness );'
+        )}
       `;
     };
     depthMaterial.current.depthTest = false;
@@ -342,6 +342,7 @@ export const Model = ({
         {models.map((model, index) => (
           <>
             inside models map {index}
+            {console.log('MAP,LOADED', loaded)}
             <Device
               key={JSON.stringify(model.position)}
               renderer={renderer}
@@ -499,7 +500,7 @@ const Device = ({
     };
 
     setLoadDevice({ start: load });
-    console.log("USE-EFF-1", loadDevice);
+    console.log('USE-EFF-1', loadDevice);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -509,8 +510,8 @@ const Device = ({
 
     const onLoad = async () => {
       const { loadFullResTexture, playAnimation } = await loadDevice.start();
-      console.log("LOADED HERE");
-      setLoaded(true);
+      console.log('LOADED HERE');
+      // setLoaded(true);
 
       // if (!reduceMotion) {
       //   animation = playAnimation();
@@ -526,7 +527,7 @@ const Device = ({
     startTransition(() => {
       onLoad();
     });
-    console.log("USE-EFF-2", !loadDevice);
+    console.log('USE-EFF-2', !loadDevice);
     // alert("SHOW")
 
     return () => {
@@ -536,8 +537,5 @@ const Device = ({
   }, [loadDevice]);
 
   // [console.log("SHOW", !show && "hi")]
-  return (
-    <>
-      {' '} THIS IS DEVICEE</>
-  );
+  return <> THIS IS DEVICEE</>;
 };
