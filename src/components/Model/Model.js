@@ -533,7 +533,7 @@ const Device = ({
       animation?.stop();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [show]);
+  }, [loadDevice]);
 
   return (
     <>
