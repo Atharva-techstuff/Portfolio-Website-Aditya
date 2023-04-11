@@ -342,7 +342,7 @@ export const Model = ({
         {models.map((model, index) => (
           <>
             inside models map
-            {/* <Device
+            <Device
               key={JSON.stringify(model.position)}
               renderer={renderer}
               modelGroup={modelGroup}
@@ -352,7 +352,7 @@ export const Model = ({
               index={index}
               setLoaded={setLoaded}
               model={model}
-            /> */}
+            />
           </>
         ))}
       </div>
