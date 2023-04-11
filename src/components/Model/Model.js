@@ -538,5 +538,5 @@ const Device = ({
   return (
     <>
       {' '} THIS IS DEVICEE</>
-  )
+  );
 };
