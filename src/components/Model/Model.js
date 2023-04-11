@@ -534,4 +534,9 @@ const Device = ({
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loadDevice, show]);
+
+  return (
+    <>
+      {' '} THIS IS DEVICEE</>
+  )
 };
