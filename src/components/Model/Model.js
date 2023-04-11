@@ -503,37 +503,37 @@ const Device = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  useEffect(() => {
-    // if (!loadDevice || !show) return;
-    let animation;
+  // useEffect(() => {
+  //   // if (!loadDevice || !show) return;
+  //   let animation;
 
-    const onLoad = async () => {
-      const { loadFullResTexture, playAnimation } = await loadDevice.start();
+  //   const onLoad = async () => {
+  //     const { loadFullResTexture, playAnimation } = await loadDevice.start();
 
-      setLoaded(true);
+  //     setLoaded(true);
 
-      if (!reduceMotion) {
-        animation = playAnimation();
-      }
+  //     if (!reduceMotion) {
+  //       animation = playAnimation();
+  //     }
 
-      await loadFullResTexture();
+  //     await loadFullResTexture();
 
-      if (reduceMotion) {
-        renderFrame();
-      }
-    };
+  //     if (reduceMotion) {
+  //       renderFrame();
+  //     }
+  //   };
 
-    startTransition(() => {
-      onLoad();
-    });
-    // console.log("USE-EFF-2", show);
-    // alert("SHOW")
+  //   startTransition(() => {
+  //     onLoad();
+  //   });
+  //   // console.log("USE-EFF-2", show);
+  //   // alert("SHOW")
 
-    return () => {
-      animation?.stop();
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [loadDevice, show]);
+  //   return () => {
+  //     animation?.stop();
+  //   };
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, []);
 
   return (
     <>
