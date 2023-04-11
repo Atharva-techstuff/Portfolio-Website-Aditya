@@ -326,7 +326,7 @@ export const Model = ({
   }, [renderFrame]);
 
   return (
-    <div>
+    <>
       First div block
       <div
         className={classes(styles.model, className)}
@@ -356,7 +356,7 @@ export const Model = ({
           </>
         ))}
       </div>
-    </div>
+    </>
   );
 };
 
@@ -387,6 +387,7 @@ const Device = ({
       node.material.color = new Color(0xffffff);
       node.material.transparent = true;
       node.material.map = texture;
+      // console.log("TEXT",texture);
     };
 
     // Generate promises to await when ready
@@ -498,7 +499,7 @@ const Device = ({
     };
 
     setLoadDevice({ start: load });
-
+    console.log("USE-EFF-1", loadDevice);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -525,6 +526,8 @@ const Device = ({
     startTransition(() => {
       onLoad();
     });
+    // console.log("USE-EFF-2", show);
+    // alert("SHOW")
 
     return () => {
       animation?.stop();
