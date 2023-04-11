@@ -341,10 +341,10 @@ export const Model = ({
         <canvas className={styles.canvas} ref={canvas} />
         {models.map((model, index) => (
           <>
-            inside models map
+            inside models map {index}
             <Device
               key={JSON.stringify(model.position)}
-              renderer={renderer}
+              // renderer={renderer}
               modelGroup={modelGroup}
               show={show}
               showDelay={showDelay}
